@@ -8,6 +8,10 @@
     src: url('./fonts/Saira/Saira-Medium.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -26,21 +30,36 @@ h3,
 h4,
 p,
 a,
+i,
 ul,
 li {
     padding: 0px;
     margin: 0px;
 }
 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 19px;
+    border: none;
+    background-color: var(--color-darkblue);
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
 .full-container {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.143)), url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
     height: 85vh;
-    max-width: 100%;
     display: flex;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    margin-bottom: -198px;
 }
 
 .nav {
@@ -54,16 +73,16 @@ li {
 
 .container {
     height: auto;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
 .navbar {
+    width: 80%;
     height: auto;
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 90%;
     display: flex;
     z-index: 1;
     color: var(--color-white);
@@ -72,36 +91,84 @@ li {
 
 .logo h2 {
     padding: 15px 20px 10px 20px;
-    text-shadow: 2px 2px 5px rgb(62, 2, 62), 2px 2px 5px #b805a9;
+    color: #fff;
+    text-shadow: 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
 }
 
 .menu-list li {
     display: inline-block;
     list-style: none;
     padding: 20px 15px 15px 15px;
-
 }
 
 .menu-list li a {
     text-decoration: none;
     color: var(--color-silver);
-    transition: 0.6s all ease-in-out;
 }
-.menu-list i{
+
+.menu-list i {
     font-size: 25px;
     cursor: pointer;
     display: none;
 }
-.menu-list li a:hover {
-    color: var(--color-white)
+.menu-list li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--color-white);
+    transition: all ease-in-out 0.4s;
 }
-.hamburger{
+
+.menu-list li a:hover::after {
+    width: 100%;
+}
+.hamburger {
     position: absolute;
     top: 24px;
     font-size: 20px;
     right: 0;
     display: none;
+    cursor: pointer;
 }
+
+/* ----for small page menu ----*/
+#hidden-icon-menu{
+    background-color: var(--color-silver);
+    position: absolute;
+    top: 72px;
+    right: 3px;
+    box-shadow: 0px 2px 10px -4px rgb(0, 0, 0);
+    display: none;
+    position: fixed;
+}
+.small-menu li{
+    list-style: none;
+    text-align: center;
+    padding: 5px 15px 5px 15px;
+}
+.small-menu li a{
+    font-size: 20px;
+    color: var(--color-darkblue);
+    text-decoration: none;
+    
+}
+.small-menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height:2px;
+    background: var(--color-darkblue);
+    transition: all ease-in-out 0.5s;
+}
+
+.small-menu li a:hover::after {
+    width: 22px;
+}
+
+/*----------------------------*/
+
+
 .desc {
     color: var(--color-white);
     letter-spacing: 1px;
@@ -110,60 +177,64 @@ li {
     width: 40%;
 }
 
-
 /* ----about-section---- */
 .about-section {
-    height: 100vh;
     text-align: center;
+    padding: 100px 0px 70px 0px;
 }
 
 .my-image img {
     height: 190px;
     width: 190px;
     border: 4px solid var(--color-white);
+    box-shadow: 0px 2px 15px -4px var(--color-darkblue);
     border-radius: 50%;
     position: relative;
-    top: -105px;
 }
 
 .about-me {
     text-align: justify;
     height: auto;
-    margin-top: -100px;
 }
 
 .header {
     font-family: 'Saira bold';
     text-align: center;
+    font-size: 40px;
+    letter-spacing: 0.2rem;
     color: var(--color-darkblue);
-    padding: 70px 0px 50px 0px;
+    padding: 80px 0px 80px 0px;
 }
 
 .about-me p {
-    padding: 0px 10px 20px 10px;
+    padding: 0px 10px 40px 10px;
     width: 70%;
     margin: auto;
 }
 
+
 /* ----education-section---- */
 .education-section {
     background-color: var(--color-silver);
-    height: 100vh;
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 
 }
-.timeline{
+
+.timeline {
     height: auto;
     display: flex;
     justify-content: center;
 }
+
 .wrapper {
-    width:65%;
+    width: 65%;
     padding: 1rem;
     display: flex;
     margin-left: 40px;
+    margin-bottom: 40px;
 }
+
 .sessions li {
     list-style: none;
     padding-bottom: 1.8rem;
@@ -187,6 +258,7 @@ li {
     left: -8px;
     top: 0px;
 }
+
 .time {
     color: #2a2839;
 }
@@ -197,28 +269,346 @@ li {
 
 
 /*---- skill section ----*/
-.skill-section{
-    background-color: red;
-    height: 100vh;
+.skill-section {
+    height: auto;
+    padding-bottom: 150px;
+    text-align: center;
 }
 
-@media(max-width:770px){
-    .menu-list{
+.skills {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.progress-container {
+    width: 30%;
+    margin: 20px 50px 30px 50px;
+}
+
+.progress-bar {
+    background-color: rgb(222, 221, 221);
+    height: 3px;
+}
+
+.progress-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-percentage {
+    background-color: black;
+    height: 3px;
+}
+
+.ninety {
+    width: 90%;
+}
+
+.eighty {
+    width: 80%;
+}
+
+.sixty {
+    width: 60%;
+}
+
+.fourty {
+    width: 40%;
+}
+
+/*---- portfolio section ----*/
+.portfolio-section {
+    padding-bottom: 80px;
+    background-color: var(--color-silver);
+
+}
+
+.portfolio-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content {
+    position: relative;
+    height: 370px;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer;
+
+}
+
+.content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: var(--color-white);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+}
+
+.content-details p {
+    color: var(--color-white);
+    font-size: 0.9em;
+}
+
+.fadeIn-top {
+    top: 20%;
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+.fadeIn-left {
+    left: 20%;
+}
+
+.fadeIn-right {
+    left: 80%;
+}
+
+/*---- contact section ----*/
+.contact-section {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 70px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.my-contact {
+    width: 40%;
+}
+
+.my-contact p {
+    font-size: 18px;
+    padding: 10px 0px 10px 20px;
+    font-family: 'Saira bold';
+}
+
+.my-contact span {
+    font-family: 'Saira Regular';
+}
+
+.wrapper i {
+    font-size: 38px;
+    padding: 0px 10px;
+}
+
+.wrapper i:nth-child(1) {
+    color: #4867AA;
+    cursor: pointer;
+    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 150ms;
+}
+
+.wrapper i:nth-child(1):hover {
+    margin-top: -10px;
+    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper i:nth-child(2) {
+    color: #1DA1F2;
+    cursor: pointer;
+    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 150ms;
+}
+
+.wrapper i:nth-child(2):hover {
+    margin-top: -10px;
+    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper i:nth-child(3) {
+    color: #444;
+    cursor: pointer;
+    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out 150ms;
+}
+
+.wrapper i:nth-child(3):hover {
+    margin-top: -10px;
+    text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper i:nth-child(4) {
+    color: #FF0000;
+    cursor: pointer;
+    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 150ms;
+}
+
+.wrapper i:nth-child(4):hover {
+    margin-top: -10px;
+    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+}
+
+.send-message-box {
+    width: 50%;
+}
+
+.send-message-box input {
+    width: 65%;
+    padding: 15px 20px 15px 10px;
+    font-size: 16px;
+    display: block;
+    margin: 15px 0px 15px 20px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--color-darkblue);
+
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 17px;
+    margin: 15px 0px 15px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--color-darkblue);
+    transition: 0.8s all ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--color-darkblue);
+    color: white;
+}
+
+
+@media(max-width:860px) {
+    .menu-list {
         display: none;
     }
-    .menu i{
+
+    .menu i {
         display: block;
     }
+
+    .skills {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .progress-container {
+        margin: auto;
+        width: 43%;
+        margin: 10px 20px 10px 20px;
+    }
+
+    .wrapper {
+        width: 80%;
+
+    }
+
+    .wrapper i:nth-child(1) {
+        margin-left: -50px;
+    }
+
+    .contact-section {
+        width: 99%;
+    }
+
+    .my-contact {
+        width: 50%;
+    }
+
+    .my-contact p {
+        padding: 10px 0px 10px 10px;
+    }
+
+    .send-message-box {
+        width: 50%;
+    }
+
+    .send-message-box input {
+        width: 70%;
+
+        margin: 15px 0px 15px 10px;
+    }
+
+
 }
-@media(max-width: 710px){
+
+@media(max-width: 710px) {
     .desc {
         width: 80%;
     }
+
     .about-me p {
         width: 80%;
     }
-    .wrapper {
-        width:80%;
-        
+
+    .contact-container {
+        flex-direction: column;
+
+    }
+
+    .my-contact {
+        width: 90%;
+        margin: auto;
+    }
+
+    .send-message-box {
+        width: 90%;
+        margin: auto;
+    }
+
+
+
+
+}
+
+@media(max-width:640px) {
+    .progress-container {
+        width: 70%;
+        margin: 10px 20px 10px 20px;
     }
 }
