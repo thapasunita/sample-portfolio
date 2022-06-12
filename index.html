@@ -28,12 +28,12 @@
             </div>
             <div class="menu">
               <ul class="menu-list">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#education">EDUCATION</a></li>
-                <li><a href="#skill">SKILL</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li class="menu-link active"><a href="#">HOME</a></li>
+                <li class="menu-link"><a href="#about">ABOUT</a></li>
+                <li class="menu-link"><a href="#education">EDUCATION</a></li>
+                <li class="menu-link"><a href="#skill">SKILL</a></li>
+                <li class="menu-link"><a href="#portfolio">PORTFOLIO</a></li>
+                <li class="menu-link"><a href="#contact">CONTACT</a></li>
               </ul>
               <i onclick="showMenu()" class="fa fa-bars hamburger"></i>
             </div>
@@ -112,36 +112,58 @@
         My Education
       </h1>
       <div class="timeline">
-        <div class="wrapper">
-          <ul class="sessions">
-            <li>
-              <div class="time">1999</div>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
-            </li>
+        <div class="timeline-box">
+          <div class="timeline-heading">
+            <h1>Degree</h1>
+            <h2>Institute Name</h2>
+            <p>Month YYYY - Month YYYY</p>
+          </div>
 
-            <li>
-              <div class="time">2012</div>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
-            </li>
+          <div>
+            <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+        </div>
 
-            <li>
-              <div class="time">2019</div>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
-            </li>
+        <div class="timeline-box">
+          <div class="timeline-heading">
+            <h1>Degree</h1>
+            <h2>Institute Name</h2>
+            <p>Month YYYY - Month YYYY</p>
+          </div>
 
-            <li>
-              <div class="time">2021</div>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
-            </li>
-          </ul>
+          <div>
+            <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+        </div>
+
+        <div class="timeline-box">
+          <div class="timeline-heading">
+            <h1>Degree</h1>
+            <h2>Institute Name</h2>
+            <p>Month YYYY - Month YYYY</p>
+          </div>
+
+          <div>
+            <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+        </div>
+
+        <div class="timeline-box">
+          <div class="timeline-heading">
+            <h1>Degree</h1>
+            <h2>Institute Name</h2>
+            <p>Month YYYY - Month YYYY</p>
+          </div>
+
+          <div>
+            <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+        </div>
+
+        <div class="timeline-divider">
+           <div class="timeline-traveller">
+            <i class="fa fa-plane" style="font-size: 40px;"></i>
+           </div>
         </div>
       </div>
     </div>
@@ -263,6 +285,7 @@
             src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1812&q=80">
           <div class="content-details fadeIn-right">
             <h3>This is a title</h3>
+            position: sticky;
             <p>This is a short description</p>
           </div>
         </div>
@@ -308,7 +331,7 @@
     <div class="container">
       <h1 class="header">
         My Contact
-      </h1>
+      </h>
 
       <div class="contact-container">
         <div class="my-contact">
@@ -366,6 +389,9 @@
     function closeMenuFunction() {
       document.getElementById("hidden-icon-menu").style.display = "none";
     }
+
+
+
   </script>
 </body>
 
